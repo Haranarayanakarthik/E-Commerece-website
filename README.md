@@ -1,1 +1,1 @@
-# E-Commerece-website
+# ecommerce-shop-starter
