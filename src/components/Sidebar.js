@@ -10,10 +10,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LoginIcon from '@mui/icons-material/Login';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import { Link } from 'react-router-dom';
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
@@ -24,26 +24,21 @@ export default function TemporaryDrawer() {
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation">
-      <Button
-        onClick={() => toggleDrawer(false)}
-        sx={{
-          display: 'flex',
-          justifyContent: 'flex-start',
-          marginBottom: 1,
-          marginLeft: 1,
-        }}
-        startIcon={<CloseIcon />}
-      >
-        Close
-      </Button>
       <Divider />
       <List>
-        {[{ text: 'Home', icon: <HomeIcon /> }, { text: 'Products', icon: <InventoryIcon /> }, { text: 'Mycart', icon: <ShoppingCartIcon /> }, { text: 'Login', icon: <LoginIcon /> }].map((item) => (
+        {[
+          { text: 'Home', icon: <HomeIcon />, path: '/' },
+          { text: 'Products', icon: <InventoryIcon />, path: '/' },
+          { text: 'My Cart', icon: <ShoppingCartIcon />, path: '/cart' },
+          { text: 'Login', icon: <LoginIcon />, path: '/login' },
+        ].map((item) => (
           <ListItem key={item.text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItemButton>
+            <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <ListItemButton>
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.text} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
