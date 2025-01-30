@@ -43,12 +43,6 @@ const styles = {
     backgroundColor: "#7fffd4",
     padding: "10px",
   },
-  // hr: {
-  //   border: 0,
-  //   height: "1px",
-  //   backgroundColor: "#ccc",
-  //   margin: "1rem 0",
-  // },
   container: {
     maxWidth: "800px",
     margin: "0 auto",
