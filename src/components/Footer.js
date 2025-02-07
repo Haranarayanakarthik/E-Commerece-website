@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
         <div style={styles.socialIcons}>
           <a
-            href="https://github.com/PoornaSandeepAnde"
+            href="https://github.com/Haranarayanakarthik"
             style={styles.iconLink}
           >
             <img
@@ -20,7 +20,7 @@ const Footer = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/charan-lakkimsetti-744888258/"
+            href="https://www.linkedin.com/in/kommaraju-hara-narayana-karthik-564917258/"
             style={styles.iconLink}
           >
             <img
